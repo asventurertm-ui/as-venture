@@ -1,0 +1,6 @@
+{
+  "name": "AS Solar",
+  "description": "AS Solar - Advance Solar Solution Engineering. Central India's trusted solar engineering company providing residential, commercial, industrial, and smart solar solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

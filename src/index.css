@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", var(--font-sans);
+
+  /* Map emerald to Karmyug's Royal/Cobalt Blue brand palette */
+  --color-emerald-50: #f0f7ff;
+  --color-emerald-100: #e0efff;
+  --color-emerald-200: #badbfe;
+  --color-emerald-300: #85beff;
+  --color-emerald-400: #4998ff;
+  --color-emerald-500: #2b62b7;
+  --color-emerald-600: #1d4ed8;
+  --color-emerald-700: #2b62b7;
+  --color-emerald-800: #133774;
+  --color-emerald-900: #0b1b3d;
+  --color-emerald-950: #060f25;
+
+  /* Map amber to Karmyug's Saffron/Orange brand palette */
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fa9d1c;
+  --color-amber-500: #fa9d1c;
+  --color-amber-600: #e6820f;
+  --color-amber-700: #c25e00;
+  --color-amber-800: #9a4400;
+  --color-amber-900: #7c3200;
+
+  /* Map slate to Karmyug's Warm Cream/Ivory soft backgrounds */
+  --color-slate-50: #fffdf6;
+  --color-slate-100: #fff9e6;
+  --color-slate-200: #fef1cb;
+  --color-slate-300: #fde0a3;
+
+  /* Map green to Karmyug's Forest Green brand palette */
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-500: #10754e;
+  --color-green-600: #0d6847;
+  --color-green-700: #064e3b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+/* Custom range input styling */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fa9d1c;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(250, 157, 28, 0.45);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
