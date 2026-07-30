@@ -6,9 +6,9 @@ import { SectionBadge } from './SectionBadge';
 const ACHIEVEMENTS_DATA = [
   {
     id: 1,
-    title: "Adani Solar Project",
-    category: "Commercial",
-    image: "/as-venture-adani.solar.png",
+    title: "Global Solar Expo",
+    category: "Acheivements",
+    image: "/as-venture-acheivements.jpg",
     size: "large",
   },
   {

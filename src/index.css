@@ -30,10 +30,10 @@
   --color-amber-800: #9a4400;
   --color-amber-900: #7c3200;
 
-  /* Map slate to Karmyug's Warm Cream/Ivory soft backgrounds */
-  --color-slate-50: #fffdf6;
-  --color-slate-100: #fff9e6;
-  --color-slate-200: #fef1cb;
+  /* Map slate to  Warm Cream/Ivory soft backgrounds */
+  --color-slate-50:#F4F8FF ;
+  --color-slate-100: #f0f7ff;
+  --color-slate-200:#e0efff;
   --color-slate-300: #fde0a3;
 
   /* Map green to Karmyug's Forest Green brand palette */

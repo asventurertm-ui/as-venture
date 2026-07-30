@@ -108,7 +108,7 @@ export default function SolarCalculator({ initialBill = 5000, compact = false }:
                 step="1000"
                 value={bill}
                 onChange={(e) => setBill(Number(e.target.value))}
-                className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                className="w-full h-2 bg-yellow-50 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
               <div className="flex justify-between text-[10px] font-bold text-slate-400 mt-2 px-1">
                 <span>₹1,000</span>
@@ -142,7 +142,7 @@ export default function SolarCalculator({ initialBill = 5000, compact = false }:
             <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex flex-col justify-between">
               <span className="text-xs font-extrabold text-emerald-700 block mb-1">Estimated Monthly Savings</span>
               <div>
-                <span className="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-display">₹{monthlySavings.toLocaleString('en-IN')}</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-green-500 font-display">₹{monthlySavings.toLocaleString('en-IN')}</span>
               </div>
               <p className="text-[10px] text-slate-400 mt-2">Generates {unitsMin}-{unitsMax} units/mo</p>
             </div>
@@ -150,7 +150,7 @@ export default function SolarCalculator({ initialBill = 5000, compact = false }:
             <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex flex-col justify-between">
               <span className="text-xs font-extrabold text-emerald-700 block mb-1">Annual Savings</span>
               <div>
-                <span className="text-2xl sm:text-3xl font-extrabold text-emerald-500 font-display">₹{annualSavings.toLocaleString('en-IN')}</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-green-500 font-display">₹{annualSavings.toLocaleString('en-IN')}</span>
               </div>
               <p className="text-[10px] text-slate-400 mt-2">Calculated for 12 billing cycles</p>
             </div>
