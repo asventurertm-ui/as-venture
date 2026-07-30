@@ -10,6 +10,7 @@ import AchievementsView from './components/AchievementsView'; // 1. Added import
 import CertificatesAndPartnersView from './components/PartnersView'
 import { X, CheckCircle, Send, Lock } from 'lucide-react';
 import QuoteModal from './components/QuoteModal';
+import InstagramButton from "./components/InstagramButton";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('home');
@@ -91,10 +92,11 @@ export default function App() {
       </main>
 
       {/* Integrated Page Footer */}
-      <Footer setActiveTab={setActiveTab} />
+     <Footer setActiveTab={setActiveTab} />
 
-      {/* GLOBAL INTERACTIVE GET FREE QUOTE MODAL */}
-     <QuoteModal 
+<InstagramButton />
+
+<QuoteModal
    isQuoteModalOpen={isQuoteModalOpen} 
    closeQuoteModal={() => setIsQuoteModalOpen(false)} 
 />

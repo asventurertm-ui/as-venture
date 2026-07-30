@@ -256,7 +256,7 @@ export default function HomeView({ setActiveTab, openQuoteModal }: HomeViewProps
 
         <div>
           <p className="text-[10px] font-extrabold text-[#0b1b3d] leading-none">
-            200K+
+            500+
           </p>
           <p className="text-[8px] font-bold text-slate-500 leading-none mt-0.5">
             Happy Clients
@@ -281,7 +281,7 @@ export default function HomeView({ setActiveTab, openQuoteModal }: HomeViewProps
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 md:gap-x-12">
             {[
-              { target: 8, suffix: '+', label: 'Years Experience' },
+              { target: 10, suffix: '+', label: 'Years Experience' },
               { target: 500, suffix: '+', label: 'Projects Delivered' },
               { target: 100, suffix: '%', label: 'Client Focus' },
               { target: 24, suffix: '/7', label: 'Support' }
