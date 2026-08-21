@@ -9,7 +9,8 @@ interface AnimatedCounterProps {
 export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   target,
   suffix,
-  duration = 1800,
+  // Increased from 1800 to 4000 to drastically slow down the counting speed
+  duration = 4000,
 }) => {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
@@ -49,7 +50,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const progress = timestamp - startTimestamp;
       const percentage = Math.min(progress / duration, 1);
       
-      // Premium quadratic ease-out: starts fast, slows down at the end
+      // Quadratic ease-out: starts fast, slows down at the end
       const easeProgress = percentage * (2 - percentage);
       const currentCount = Math.floor(easeProgress * target);
       
@@ -68,7 +69,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   return (
     <span ref={elementRef} className="tabular-nums inline-block font-sans">
       <span>{count}</span>
-      <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold ml-0.5 opacity-90 select-none align-baseline">{suffix}</span>
+      <span className="text-lg sm:text-xl lg:text-2xl font-extrabold ml-0.5 opacity-90 select-none align-baseline">{suffix}</span>
     </span>
   );
 };

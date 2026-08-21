@@ -39,12 +39,12 @@ export default function Navbar({ activeTab, setActiveTab, openQuoteModal }: Navb
             id="nav-logo"
           >
            <div className="relative flex items-center justify-center group-hover:scale-105 transition-all duration-300">
- <img
-  src="/VENTURE_LOGO.jpg-removebg-preview.png"
-  alt="AS Venture Logo"
-  className="h-12 md:h-14 lg:h-16 w-auto object-contain"
-/>
-</div>
+            <img
+             src="/VENTURE_LOGO.jpg-removebg-preview.png"
+             alt="AS Venture Logo"
+             className="h-8 md:h-10 lg:h-12 w-auto object-contain"
+            />
+           </div>
         
           </div>
 

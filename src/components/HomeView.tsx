@@ -18,7 +18,7 @@ import {
   HeartHandshake 
 } from 'lucide-react';
 import { ActiveTab } from '../types';
-import { STATS_DATA, TRUST_FACTORS, SOLAR_SERVICES, PROCESS_STEPS, TESTIMONIALS, FAQS } from '../data';
+import { STATS_DATA, TRUST_FACTORS, SOLAR_SERVICES, PROCESS_STEPS, TESTIMONIALS, FAQS,CLIENTS_DATA } from '../data';
 import IconRenderer from './IconRenderer';
 import SolarCalculator from './SolarCalculator';
 import { AnimatedCounter } from './AnimatedCounter';
@@ -277,31 +277,41 @@ export default function HomeView({ setActiveTab, openQuoteModal }: HomeViewProps
       </section>
 
       {/* 2. STATS ROW */}
-      <section id="stats-section" className="bg-gradient-to-r from-[#173e87] via-[#2258bd] to-[#173e87] py-12 sm:py-16 md:py-20 relative z-10 text-white border-y border-[#173e87]/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_10px_30px_rgba(0,0,0,0.04)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 md:gap-x-12">
-            {[
-              { target: 10, suffix: '+', label: 'Years Experience' },
-              { target: 500, suffix: '+', label: 'Projects Delivered' },
-              { target: 100, suffix: '%', label: 'Client Focus' },
-              { target: 24, suffix: '/7', label: 'Support' }
-            ].map((stat, idx) => (
-              <div
-                key={idx}
-                className="text-center flex flex-col items-center justify-center"
-                id={`stat-box-${idx}`}
-              >
-                <h3 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-display leading-none flex items-baseline">
-                  <AnimatedCounter target={stat.target} suffix={stat.suffix} />
-                </h3>
-                <p className="text-[10px] sm:text-xs font-bold text-blue-100/80 tracking-widest uppercase mt-3">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+   <section id="stats-section" className="bg-gradient-to-r from-[#173e87] via-[#2258bd] to-[#173e87] py-8 sm:py-10 md:py-12 relative z-10 text-white border-y border-[#173e87]/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_10px_30px_rgba(0,0,0,0.04)]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Compact Heading */}
+    <h2 className="text-center text-sm sm:text-base md:text-lg font-black text-white tracking-widest uppercase mb-6 sm:mb-8 opacity-95">
+      Clientele & Experience Overview
+    </h2>
+
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 sm:gap-y-8 gap-x-6 md:gap-x-10">
+      {[
+        { target: 300, suffix: 'MW+', label: 'O&M Experience' },
+        { target: 1200, suffix: '+', label: 'Residential Clients' },
+        { target: 60, suffix: '+', label: 'Commercial Clients' },
+        { target: 32, suffix: '+', label: 'Industrial Clients' },
+        { target: 10, suffix: '+', label: 'Religious Projects' },
+        { target: 8, suffix: '+', label: 'Hospitals & Pharma' },
+        { target: 5, suffix: '+', label: 'Schools & Colleges' },
+        { target: 4, suffix: '+', label: 'Hotels & Marriage Gardens' }
+      ].map((stat, idx) => (
+        <div
+          key={idx}
+          className="text-center flex flex-col items-center justify-center"
+          id={`stat-box-${idx}`}
+        >
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-display leading-none flex items-baseline">
+            <AnimatedCounter target={stat.target} suffix={stat.suffix} />
+          </h3>
+          <p className="text-[9px] sm:text-[11px] font-bold text-blue-100/80 tracking-wider uppercase mt-1.5 text-center">
+            {stat.label}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* 3. WHY THOUSANDS TRUST AS SOLAR */}
       <section id="trust-factors-section" className="py-20 sm:py-24">
@@ -343,81 +353,130 @@ export default function HomeView({ setActiveTab, openQuoteModal }: HomeViewProps
       </section>
 
       {/* 4. COMPLETE SOLAR SOLUTIONS */}
-     <section id="services-grid-section" className="py-20 sm:py-24 bg-white border-t border-b border-slate-100">
-  <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
-      <SectionBadge>End-to-End Solutions</SectionBadge>
-      <h2 className="text-3xl sm:text-4xl font-black text-[#0b1b3d] tracking-tight font-display">
-        Complete <span className="text-[#0b1b3d]">Solar Energy</span> Solutions
-      </h2>
-      <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-amber-500 mx-auto rounded-full"></div>
-      <p className="text-slate-500 text-sm leading-relaxed">
-        We offer bespoke commercial, residential, and agricultural solar grids designed to maximize yields and provide sustained, worry-free clean power.
-      </p>
-    </div>
+    <>
+  {/* EXISTING SERVICES GRID SECTION - UNTOUCHED */}
+ {/* EXISTING SERVICES GRID SECTION - UNTOUCHED */}
+  <section id="services-grid-section" className="py-20 sm:py-24 bg-white border-t border-b border-slate-100">
+    <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
+        <SectionBadge>End-to-End Solutions</SectionBadge>
+        <h2 className="text-3xl sm:text-4xl font-black text-[#0b1b3d] tracking-tight font-display">
+          Complete <span className="text-[#0b1b3d]">Solar Energy</span> Solutions
+        </h2>
+        <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-amber-500 mx-auto rounded-full"></div>
+        <p className="text-slate-500 text-sm leading-relaxed">
+          We offer bespoke commercial, residential, and agricultural solar grids designed to maximize yields and provide sustained, worry-free clean power.
+        </p>
+      </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8" id="home-services-grid">
-      {SOLAR_SERVICES.map((service, idx) => (
-        <motion.div
-          key={service.id}
-          variants={itemVariants}
-          id={`service-card-${service.id}`}
-          className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100/80 hover:border-emerald-700/30 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_40px_rgba(11,27,61,0.05)] transition-all duration-300 group flex flex-col justify-between"
-        >
-          <div>
-            <div className="relative overflow-hidden aspect-video">
-              <img 
-                src={service.image} 
-                alt={service.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs py-1 px-2.5 rounded-lg border border-slate-200/50 shadow-xs text-[10px] font-extrabold text-slate-800 uppercase tracking-wider">
-                {service.id.replace('-', ' ')}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8" id="home-services-grid">
+        {SOLAR_SERVICES.map((service, idx) => (
+          <motion.div
+            key={service.id}
+            variants={itemVariants}
+            id={`service-card-${service.id}`}
+            className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100/80 hover:border-emerald-700/30 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_40px_rgba(11,27,61,0.05)] transition-all duration-300 group flex flex-col justify-between"
+          >
+            <div>
+              <div className="relative overflow-hidden aspect-video">
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs py-1 px-2.5 rounded-lg border border-slate-200/50 shadow-xs text-[10px] font-extrabold text-slate-800 uppercase tracking-wider">
+                  {service.id.replace('-', ' ')}
+                </div>
+              </div>
+              <div className="p-5 sm:p-6">
+                <h4 className="font-extrabold text-slate-900 text-lg mb-2 tracking-tight group-hover:text-emerald-800 transition-colors duration-300">
+                  {service.title}
+                </h4>
+                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed line-clamp-2">
+                  {service.description}
+                </p>
               </div>
             </div>
-            <div className="p-5 sm:p-6">
-              <h4 className="font-extrabold text-slate-900 text-lg mb-2 tracking-tight group-hover:text-emerald-800 transition-colors duration-300">
-                {service.title}
-              </h4>
-              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed line-clamp-2">
-                {service.description}
-              </p>
+            <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('services');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="w-full py-2.5 px-4 rounded-xl border border-slate-200 hover:border-emerald-700 hover:text-emerald-800 hover:bg-emerald-50 text-slate-700 font-bold text-xs tracking-wide transition-all duration-300 flex items-center justify-center space-x-2 shadow-xs hover:shadow-md"
+              >
+                <span>Learn Features</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
             </div>
-          </div>
-          <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-2">
-            <button
-              type="button"
-              onClick={() => {
-                setActiveTab('services');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="w-full py-2.5 px-4 rounded-xl border border-slate-200 hover:border-emerald-700 hover:text-emerald-800 hover:bg-emerald-50 text-slate-700 font-bold text-xs tracking-wide transition-all duration-300 flex items-center justify-center space-x-2 shadow-xs hover:shadow-md"
-            >
-              <span>Learn Features</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </motion.div>
-      ))}
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="text-center mt-12" id="explore-services-cta">
+        <button
+          onClick={() => {
+            setActiveTab('services');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="inline-flex items-center space-x-2 bg-[#0b1b3d] hover:bg-emerald-800 text-white font-extrabold py-3.5 px-8 rounded-xl text-xs tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-emerald-700/20 hover:-translate-y-0.5 cursor-pointer group"
+        >
+          <span>Explore All Services</span>
+          <ChevronRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  {/* NEW FEATURE: CLIENTS WE EMPOWERED (INFINITE SCROLL) - Adjusted Height & Image Sizes */}
+  <section id="services-clients-section" className="pt-12 pb-10 bg-white overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-7 text-center space-y-3">
+      <SectionBadge>Our Trusted Partners</SectionBadge>
+      <h2 className="text-3xl sm:text-4xl font-black text-[#0b1b3d] tracking-tight font-display">
+        Clients We Empowered
+      </h2>
     </div>
 
-    <div className="text-center mt-12" id="explore-services-cta">
-      <button
-        onClick={() => {
-          setActiveTab('services');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-        className="inline-flex items-center space-x-2 bg-[#0b1b3d] hover:bg-emerald-800 text-white font-extrabold py-3.5 px-8 rounded-xl text-xs tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-emerald-700/20 hover:-translate-y-0.5 cursor-pointer group"
-      >
-        <span>Explore All Services</span>
-        <ChevronRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
-      </button>
+    {/* Infinite Marquee Container - Borders removed, padding reduced */}
+    <div className="relative w-full overflow-hidden flex bg-white py-4">
+      {/* Duplicated array for seamless infinite loop */}
+      <div className="flex w-max animate-scroll-x items-center gap-12 sm:gap-24 px-6 sm:px-12 hover:[animation-play-state:paused]">
+        {[...CLIENTS_DATA, ...CLIENTS_DATA].map((client, idx) => (
+          <div 
+            key={`${client.id}-${idx}`} 
+            className="flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer min-w-[120px] sm:min-w-[140px]"
+          >
+            {/* Reduced image sizes */}
+            <img 
+              src={client.logo} 
+              alt={client.name} 
+              className="h-8 sm:h-12 object-contain mb-2 drop-shadow-sm" 
+              loading="lazy" 
+            />
+            <span className="text-[10px] sm:text-[11px] font-bold text-slate-600 text-center uppercase tracking-wider">
+              {client.name}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
-
-  </div>
-</section>
+    
+    {/* Inline styles for custom infinite scroll animation */}
+    <style dangerouslySetInnerHTML={{__html: `
+      @keyframes scroll-x {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-scroll-x {
+        animation: scroll-x 30s linear infinite;
+      }
+    `}} />
+  </section>
+</>
 
       {/* 5. PROCESS STEP TIMELINE */}
       <section id="process-timeline-section" className="py-20 sm:py-24">

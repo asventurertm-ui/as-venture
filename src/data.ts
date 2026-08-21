@@ -412,6 +412,24 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
+export const CLIENTS_DATA = [
+  { id: 1, name: 'Airen International', logo: '/airen-international-logo.png' },
+  { id: 2, name: 'Ankoor Hospital', logo: '/Ankoor-Hospital.jpg' },
+  { id: 3, name: 'Anmol Ratan', logo: '/anmol-ratan-logo.jpg' },
+  { id: 4, name: 'Arochem', logo: '/arochem-logo.jpg' },
+  { id: 5, name: 'GD Hospital', logo: '/gd_hospital_logo.jpg' },
+  { id: 6, name: 'GR Industries', logo: '/gr-industries-logo.jpg' },
+  { id: 7, name: 'Indian Oil', logo: '/indian-oil-logo.png' },
+  { id: 8, name: 'NCHSS', logo: '/NCHSS-Logo.webp' },
+  { id: 9, name: 'NKM Tech', logo: '/nkm-tech.png' },
+  { id: 10, name: 'Paras Agro', logo: '/paras-agro-logo.jpg' },
+  { id: 11, name: 'Parshvanath Industries', logo: '/parshvanath-industries-logo.avif' },
+  { id: 12, name: 'RM Jaora', logo: '/rm-jaora-logo.jpg' },
+  { id: 13, name: 'Roopvarsha', logo: '/roopvarsha.jpg' },
+  { id: 14, name: 'Tata Motor', logo: '/tata-motar-logo.jpg' },
+  { id: 15, name: 'The Great Padma', logo: '/the-great-padma-logo.jpg' }
+];
+
 export const FAQS: FAQItem[] = [
   {
     id: 'faq-1',
